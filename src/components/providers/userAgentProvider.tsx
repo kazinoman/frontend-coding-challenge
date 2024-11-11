@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useMemo, useState, ReactNode, useEffect } from "react";
-import { setCookie } from "cookies-next/client";
 
 const CONTEXT_ERROR = "useUserAgentContext must be used within a UserAgentProvider";
 
@@ -54,7 +53,6 @@ export const UserAgentProvider: React.FC<UserAgentProviderProps> = ({ children, 
         console.log("Fetched user agent:", data["user-agent"]);
 
         setUserAgent(data["user-agent"]);
-        setCookie("userAgent", data["user-agent"]);
       } catch (error) {
         console.error("Failed to fetch user agent:", error);
       }
