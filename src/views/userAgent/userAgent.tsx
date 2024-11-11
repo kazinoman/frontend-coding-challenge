@@ -11,11 +11,11 @@ export const UserAgent = () => {
       <BackToHome />
 
       {userAgent && (
-        <div className="flex font-mono font-semibold text-sm">
-          <div className="border p-2">UserAgent</div>
+        <section className="flex font-mono font-semibold text-sm">
+          <span className="border p-2">UserAgent</span>
 
-          <div className="border p-2">{userAgent}</div>
-        </div>
+          <span className="border p-2">{userAgent}</span>
+        </section>
       )}
 
       {!userAgent && <div>No user agent</div>}
